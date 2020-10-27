@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <a href="/" class="icon-large" title="home">
+                <i class="fa fa-home icon"></i>
+            </a>
+            <p>
+                <button onclick="changeaddress('bc1qjfe239yrr0qprg8tz8gtzsvxujk0pp465y4u4y')" class="icon-large"
+                    title="bitcoin">
+                    <i class="fab fa-bitcoin icon"></i>
+                </button>
+                <button onclick="changeaddress('0x439FC978639D9b0d1b11b869b92889cD004E0fA2')" class="icon-large"
+                    title="ethereum">
+                    <i class="fab fa-ethereum icon"></i>
+                </button>
+                <button onclick="changeaddress('nano_1dh9tyge6daq394ha95owyjas454uuzfcnagr7jjn44sr4853srmzzssr49m')"
+                    class="icon-large" title="nano">
+                    Nano
+                </button>
+                <button onclick="changeaddress('ltc1qglc620uem04l6xjkjr3ncften3dleqhd757e08')" class="icon-large"
+                    title="litecoin">
+                    LTC
+                </button>
+            </p>
+            <div>
+                <input disabled value="Crypto Address" class="icon" style="width: 80%; text-align: center;"
+                    id="addressfield">
+            </div>
+        </div>
+    </div>
+    <script>
+        function changeaddress(cryptoaddress) {
+            var addressfield = document.getElementById('addressfield')
+            addressfield.value = cryptoaddress
+        }
+    </script>
+</body>
+
+</html>

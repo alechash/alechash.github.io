@@ -85,3 +85,14 @@ table {
 .flex-container {
     padding: 10px;
 }
+
+.button {
+    color: white;
+    background-color: purple;
+    border: none;
+    border-radius: 25px;
+}
+
+.button-large {
+    padding: 10px;
+}

@@ -1,0 +1,6 @@
+<script>
+    const urlparams = new URLSearchParams(window.location.search);
+    const videoid = urlparams.get('v');
+
+    window.location = 'https://www.youtube.com/watch?v=' + videoid
+</script>

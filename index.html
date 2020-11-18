@@ -72,6 +72,10 @@
             </div>
             <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
             <script>
+                function url(url) {
+                    return window.location = url
+                }
+
                 function loadvideos() {
                     var videoids = []
 
@@ -85,20 +89,21 @@
                     }
                     document.getElementById('videoscroll').innerHTML = html
                 }
+
                 $.getJSON('/papers.json', function (data) {
                     var formatteddata = data
                     var html = ''
 
                     for (i = 0; i < formatteddata.length; i++) {
                         var html = html + `
-                        <a href=${formatteddata[i].url}>
                             <li class="card">
                                 <span class="cardtext">
                                     ${formatteddata[i].title}
                                 </span>
-                                <img class="cardimg" src=${formatteddata[i].image}>
-                            </li>
-                        </a>`
+                                <a href=${formatteddata[i].url}>
+                                    <img class="cardimg" src=${formatteddata[i].image}>
+                                </a>
+                            </li>`
                     }
 
                     document.getElementById('paperslist').innerHTML = html

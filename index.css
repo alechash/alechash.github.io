@@ -1,218 +1,188 @@
-html,
 body {
-    margin: 0px;
+    margin: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(0, 20, 41);
-    color: white;
-    box-sizing: border-box;
 }
 
-.papersbutton {
+#tv-room {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#tv-stand {
+    position: absolute;
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 60%;
+    height: 40%;
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 400px;
+    left: 0;
+    right: 0;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tv-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 6px white solid;
+}
+
+#kitchen {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#dishwasher {
+    margin-bottom: 100px;
+}
+
+#garage {
+    position: fixed;
+    background-color: black;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+#garage-door {
+    padding: 10px;
+    color: white;
+}
+
+#garage-steps {
+    font-family: 'Inconsolata';
+}
+
+.tool {
+    float: right;
+    padding-left: 3px;
+    text-decoration: underline;
+    font-family: 'Inconsolata';
+}
+
+.tool:visited {
+    color: red;
+}
+
+.undercanvastext {
+    position: absolute;
+}
+
+.playbutton {
+    color: white;
     background-color: transparent;
     border: none;
+    border-top: 6px white solid;
+    border-left: 6px white solid;
+    font-size: large;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+.playbutton:hover {
+    color: black;
+    background-color: white;
+    border: none;
+    border-top: 6px white solid;
+    border-left: 6px white solid;
+    font-size: large;
+    padding: 5px;
+}
+
+.playbutton:focus {
+    outline: none;
+}
+
+.resetbutton {
+    margin-left: 80px;
+    border: none;
+    padding: 11px;
+}
+
+.resetbutton:hover {
+    margin-left: 80px;
+    background-color: transparent;
     color: white;
-    font-size: medium;
+    border: none;
+    padding: 11px;
 }
 
 .container {
-    width: 100%;
-    height: 100%;
-    display: table;
-}
-
-.inner-container {
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.navcenter {
-    position: fixed;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    border-bottom: 1px black solid;
-    z-index: 2000;
-    background-color: rgb(0, 20, 41);
-}
-
-.pfp {
-    border-radius: 10000px;
-    height: 40px;
-    display: block;
-    margin: 0 auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.rightlinks {
-    right: 15px;
-    top: 21px;
-    position: absolute;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.leftlinks {
-    left: 15px;
-    top: 21px;
-    position: absolute;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.text {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: large;
-}
-
-.text-large {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 25px;
-    float: left;
-    padding: 5px;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 10px;
-}
-
-a {
-    color: rgb(169, 231, 255);
-    text-decoration: none;
-}
-
-a:hover {
-    color: white;
-    text-decoration: none;
-}
-
-.icon {
-    font-size: larger;
-    padding: 4px;
-    color: white;
-    border: none;
-    background-color: transparent;
-}
-
-.icon-large {
-    font-size: xx-large;
-    padding: 4px;
-    color: white;
-    border: none;
-    background-color: transparent;
-}
-
-th,
-td {
-    width: 100%;
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 5px;
-    text-align: left;
-    color: rgb(99, 99, 99);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-table {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
-.flex-container {
-    padding: 10px;
-}
-
-.button {
-    color: white;
-    background-color: purple;
-    border: none;
-    border-radius: 25px;
-}
-
-.button-large {
-    padding: 10px;
-}
-
-.fixed {
-    position: absolute;
-}
-
-.light {
-    color: rgb(99, 99, 99);
-}
-
-.center {
+    width: 60%;
     margin: auto;
-    width: 100%;
 }
 
-.cards>li,
-.card {
-    scroll-snap-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: black;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 8px;
-    height: 200px;
-    width: 400px;
-    overflow: hidden;
-    text-align: center;
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.logo {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+    font-size: large;
+    margin-bottom: 17px;
+    top: 10px;
+}
+
+.post {
     position: relative;
-    overflow: hidden;
+    padding: 20px;
+    margin-bottom: 40px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.postimg {
+    width: 90%;
+    border: 2px black solid;
 }
 
-.projects>* {
-    grid-column: 2 / -2;
+.postmeta {
+    text-align: left !important;
 }
 
-.projects>.full {
-    grid-column: 1 / -1;
+.posttitle {
+    padding-left: 5%;
+    font-family: 'Inconsolata';
+    margin-top: 0;
+    font-size: xx-large;
+    margin-bottom: 5px;
 }
 
-.projects {
-    padding: 20px 0;
-    display: grid;
-    grid-gap: 20px 0;
-    grid-template-columns: 20px 1fr 20px;
-    align-content: start;
+.posturl {
+    margin-right: 5%;
+    padding: 3px;
+    font-size: medium;
+    text-decoration: underline;
+    float: right;
+    color: red;
+    font-family: 'Inconsolata';
 }
 
-.projects {
-    overflow-y: scroll;
+.posturl:hover {
+    font-weight: bold;
 }
 
-.cardimg {
-    width: 110%;
-    height: auto;
-    z-index: 999;
+.posturl:visited {
+    color: purple;
 }
 
-.cardtext {
-    z-index: 1000;
+.postabout {
     margin: 0;
-    padding: 0;
-    left: auto;
-    position: absolute;
-    background-color: black;
-    padding: 2px;
-}
-
-.cards {
-    display: grid;
-    grid-gap: calc(20px / 2);
-    grid-template-columns: repeat(6, 400px);
-    grid-template-rows: minmax(150px, 1fr);
-    overflow-x: scroll;
-    scroll-snap-type: x proximity;
-    padding-bottom: calc(.75 * 20px);
-    margin-bottom: calc(-.25 * 20px);
+    margin-left: 6%;
+    float: left;
+    font-family: 'Inconsolata';
 }

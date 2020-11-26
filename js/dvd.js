@@ -54,7 +54,6 @@ function update() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight / 1.5
         ctx.fillStyle = '#000';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
         //Draw DVD Logo and his background
         ctx.drawImage(dvd.img, dvd.x, dvd.y, dvd.size * scale, dvd.size * scale);
         //Move the logo
@@ -77,6 +76,30 @@ function checkHitBox() {
         dvd.yspeed *= -1;
         newImage()
     }
+}
+
+// keyboard shortcuts for new image
+document.addEventListener('keyup', function (event) {
+    if (event.key == "n") {
+        newImage()
+    }
+    if (event.key == "p") {
+        pause()
+    }
+    if (event.key == "r") {
+        reset()
+    }
+    if (event.key == "h") {
+        brandHelp()
+    }
+});
+
+function brandHelp() {
+    alert(`
+    Press "n" for a new image
+    Press "p" to play/pause
+    Press "r" to reset location
+    Press "h" for help/info`)
 }
 
 function newImage() {

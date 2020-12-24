@@ -1,0 +1,13 @@
+[{
+        "frame": "logo_bouncing.html",
+        "root": true
+    },
+    {
+        "frame": "https://littlealchemy2.com/",
+        "root": false
+    },
+    {
+        "frame": "elon_musk.html",
+        "root": true
+    }
+]

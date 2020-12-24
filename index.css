@@ -2,6 +2,17 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
+    position: absolute;
+}
+
+cen {
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -250px;
 }
 
 #tv-room {
@@ -27,6 +38,18 @@ body {
     right: 0;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo_bouncing {
+    color: white;
+}
+
+#tv {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
 }
 
 #tv-screen {
@@ -146,9 +169,16 @@ body {
     margin-bottom: 40px;
 }
 
-.postimg {
-    width: 90%;
+.postimage {
+    text-align: center;
+    height: 300px;
+    width: 100%;
     border: 2px black solid;
+}
+
+.postimg {
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .postmeta {
@@ -184,6 +214,15 @@ body {
 .postabout {
     margin: 0;
     margin-left: 6%;
+    margin-right: 6%;
+    height: 75px;
+    overflow: hidden;
     float: left;
+    word-break: break-word;
     font-family: 'Inconsolata';
+}
+
+.eff-logo {
+    max-width: 200px;
+    width: 80%;
 }

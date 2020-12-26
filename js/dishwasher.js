@@ -17,5 +17,5 @@ $.getJSON('/projects.json', function (data) {
                 </article>`
     }
 
-    document.getElementById('dishwasher').innerHTML = html
+    document.getElementById('posts-content').innerHTML = html
 })

@@ -15,7 +15,11 @@ cen {
     margin-left: -250px;
 }
 
-#tv-room {
+.left {
+    float: left;
+}
+
+#top-frame {
     background-color: black;
     position: absolute;
     width: 100%;
@@ -44,7 +48,7 @@ cen {
     color: white;
 }
 
-#tv {
+#frame {
     position: absolute;
     bottom: 0;
     height: 100%;
@@ -59,9 +63,9 @@ cen {
     border: 6px white solid;
 }
 
-#kitchen {
+#body {
     position: absolute;
-    top: 100%;
+    top: 108%;
     width: 100%;
     display: block;
     margin: auto;
@@ -70,32 +74,39 @@ cen {
     padding-bottom: 30px;
 }
 
-#dishwasher {
+#posts-content {
     margin-bottom: 100px;
 }
 
-#garage {
-    position: fixed;
+#top-footer {
+    position: absolute;
     background-color: black;
-    bottom: 0;
+    top: 100%;
     right: 0;
     width: 100%;
 }
 
-#garage-door {
+#top-footer-content {
     padding: 10px;
     color: white;
 }
 
-#garage-steps {
+#top-footer-middle {
     font-family: 'Inconsolata';
 }
+
+.tool-box {
+    max-width: 60%;
+}
+
+.tool-center {}
 
 .tool {
     float: right;
     padding-left: 3px;
     text-decoration: underline;
     font-family: 'Inconsolata';
+    color: rgb(95, 95, 255);
 }
 
 .tool:visited {
@@ -224,5 +235,6 @@ cen {
 
 .eff-logo {
     max-width: 200px;
-    width: 80%;
+    margin: 10px;
+    max-height: 40px;
 }

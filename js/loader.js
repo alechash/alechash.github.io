@@ -1,21 +1,31 @@
-$.getJSON('/projects.json', function (data) {
-    var formatteddata = data.reverse()
-    var html = ''
-    var links = ''
+loadproj('new')
 
-    for (i = 0; i < formatteddata.length; i++) {
-        links = ''
-        links = `
+function loadproj(sort) {
+    $.getJSON('/projects.json', function (data) {
+        var formatteddata = data
+        document.getElementById('sort-old').setAttribute('disabled', true)
+        document.getElementById('sort-new').removeAttribute('disabled')
+        if (sort == 'new') {
+            formatteddata = data.reverse()
+            document.getElementById('sort-new').setAttribute('disabled', true)
+            document.getElementById('sort-old').removeAttribute('disabled')
+        }
+        var html = ''
+        var links = ''
+
+        for (i = 0; i < formatteddata.length; i++) {
+            links = ''
+            links = `
             <div class="Subhead-actions"><a href="${formatteddata[i].url}" target="_blank" class="btn btn-sm btn-outline" role="button">${formatteddata[i].urlname}</a>
             </div>`
 
-        if (formatteddata[i].url2) {
-            links = links + `
+            if (formatteddata[i].url2) {
+                links = links + `
             <div class="Subhead-actions ml-3"><a href="${formatteddata[i].url2}" target="_blank" class="btn btn-sm btn-outline" role="button">${formatteddata[i].url2name}</a>
             </div>`
-        }
+            }
 
-        var html = html + `
+            var html = html + `
                 <div class="p-3 border m-3 mb-0 rounded-2">
                     <div class="Subhead">
                         <div class="Subhead-heading">
@@ -28,7 +38,8 @@ $.getJSON('/projects.json', function (data) {
                     </p>
                     <img src='/img/projects/${formatteddata[i].image}' class='border rounded-2' style='max-height:300px;max-width:95%'>
                 </div>`
-    }
+        }
 
-    document.getElementById('projects').innerHTML = html
-})
+        document.getElementById('projects').innerHTML = html
+    })
+}

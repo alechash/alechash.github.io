@@ -19,19 +19,24 @@
         </div>
         <div class="ml-5">
             <div class="mb-2 text-bold">Knowledge:
-                <span class="IssueLabel IssueLabel--big bg-blue text-white mr-1">NodeJS</span>
-                <span class="IssueLabel IssueLabel--big bg-blue text-white mr-1">Python</span>
-                <span class="IssueLabel IssueLabel--big bg-blue text-white mr-1">HTML, CSS, JS, jQuery</span>
-                <span class="IssueLabel IssueLabel--big bg-blue text-white mr-1">Git</span>
-                <span class="IssueLabel IssueLabel--big bg-blue text-white mr-1">Command Line</span>
+                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1 css-truncate-overflow">NodeJS</span>
+                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1 css-truncate-overflow">Python</span>
+                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1
+                css-truncate-overflow">HTML and CSS</span>
+                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1
+                css-truncate-overflow">JS and jQuery</span>
+                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1 css-truncate-overflow">Git</span>
+                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1 css-truncate-overflow">Command
+                    Line</span>
             </div>
             <div class="mb-2 text-bold">Frameworks:
-                <span class="IssueLabel IssueLabel--big bg-yellow mr-1">Bootstrap</span>
-                <span class="IssueLabel IssueLabel--big bg-yellow mr-1">Primer</span>
-                <span class="IssueLabel IssueLabel--big bg-yellow mr-1">Bulma</span>
+                <span class="IssueLabel IssueLabel--big bg-yellow m-1 css-truncate-overflow">Bootstrap</span>
+                <span class="IssueLabel IssueLabel--big bg-yellow m-1 css-truncate-overflow">Primer</span>
+                <span class="IssueLabel IssueLabel--big bg-yellow m-1 css-truncate-overflow">Bulma</span>
             </div>
             <div class="text-bold">Work:
-                <span class="IssueLabel IssueLabel--big bg-red text-white mr-1 tooltipped tooltipped-n"
+                <span
+                    class="IssueLabel IssueLabel--big bg-red text-white m-1 tooltipped tooltipped-n css-truncate-overflow"
                     aria-label="Lead Web Developer 2020 - Present">
                     <a class="text-white" href="https://media.siddes.com">Siddes Media</a>
                 </span>
@@ -41,6 +46,31 @@
     <div class="m-6 mt-0">
         <div class="Subhead m-3">
             <div class="Subhead-heading">Projects</div>
+            <div class="Subhead-actions">
+                <div class="d-flex flex-justify-end position-relative">
+                    <details class="details-reset details-overlay">
+                        <summary class="btn" aria-haspopup="true">
+                            Sort By
+                            <svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-mark-github"
+                                viewBox="0 0 16 16" width="16" height="16">
+                                <path fill-rule="evenodd"
+                                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z">
+                                </path>
+                            </svg>
+                        </summary>
+                        <div class="SelectMenu right-0">
+                            <div class="SelectMenu-modal">
+                                <div class="SelectMenu-list">
+                                    <button class="SelectMenu-item" role="menuitem" onclick="loadproj('new')"
+                                        id="sort-new">Newest</button>
+                                    <button class="SelectMenu-item disabled" role="menuitem" onclick="loadproj()"
+                                        id="sort-old">Oldest</button>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
         </div>
         <div class="d-flex flex-column" id="projects">
         </div>

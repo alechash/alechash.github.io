@@ -5,87 +5,475 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alec Wilson</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap" />
-    <meta name="google-site-verification" content="jBvwCqWt6myzFE0Rs0rx0MzQCXW773oclioZNBYwhWk" />
-    <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/studio.css">
+    <link rel="stylesheet" href="/assets/css/flexboxgrid.min.css">
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 </head>
 
 <body>
-    <includes include="/includes/navbar.html"></includes>
-    <div class="m-6 mt-0">
-        <div class="Subhead m-3">
-            <div class="Subhead-heading">Information</div>
-            <div class="Subhead-description">Here is some information about what I can do and what I know.</div>
+    <div id="main">
+        <div id="content">
+            <nav id="main__navbar" class="row text-white">
+                <div class="col-xs-8 col-sm-4">
+                    <a class="pl-24 left text-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20"
+                            class="left pr-6">
+                            <path fill-rule="evenodd"
+                                d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z">
+                            </path>
+                        </svg> Alec Wilson</a>
+                </div>
+                <div class="col-xs-8 xs:hidden">
+                    <a class="pr-24 right pointer" onclick="pgpPopup()">PGP Key</a>
+                    <a class="right pointer" onclick="contactPopup()">Contact</a>
+                    <a class="right pointer" onclick="socialsPopup()">Socials and Stuff</a>
+                </div>
+                <div class="col-xs-4 xs:visible">
+                    <a class="pr-24 right pointer" onclick="menuPopup()">Menu</a>
+                </div>
+            </nav>
         </div>
-        <div class="ml-5">
-            <div class="mb-2 text-bold">Knowledge:
-                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1 css-truncate-overflow">NodeJS</span>
-                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1 css-truncate-overflow">Python</span>
-                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1
-                css-truncate-overflow">HTML and CSS</span>
-                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1
-                css-truncate-overflow">JS and jQuery</span>
-                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1 css-truncate-overflow">Git</span>
-                <span class="IssueLabel IssueLabel--big bg-blue text-white m-1 css-truncate-overflow">Command
-                    Line</span>
+        <div class="row h-half">
+            <div class="col-xs-3 border">
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
             </div>
-            <div class="mb-2 text-bold">Frameworks:
-                <span class="IssueLabel IssueLabel--big bg-yellow m-1 css-truncate-overflow">Bootstrap</span>
-                <span class="IssueLabel IssueLabel--big bg-yellow m-1 css-truncate-overflow">Primer</span>
-                <span class="IssueLabel IssueLabel--big bg-yellow m-1 css-truncate-overflow">Bulma</span>
+            <div class="col-xs-3 border">
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
             </div>
-            <div class="text-bold">Work:
-                <span
-                    class="IssueLabel IssueLabel--big bg-red text-white m-1 tooltipped tooltipped-n css-truncate-overflow"
-                    aria-label="Lead Web Developer 2020 - Present">
-                    <a class="text-white" href="https://media.siddes.com">Siddes Media</a>
-                </span>
+            <div class="col-xs-3 border">
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="m-6 mt-0">
-        <div class="Subhead m-3">
-            <div class="Subhead-heading">Projects</div>
-            <div class="Subhead-actions">
-                <div class="d-flex flex-justify-end position-relative">
-                    <details class="details-reset details-overlay">
-                        <summary class="btn" aria-haspopup="true">
-                            Sort By
-                            <svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-mark-github"
-                                viewBox="0 0 16 16" width="16" height="16">
-                                <path fill-rule="evenodd"
-                                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z">
-                                </path>
-                            </svg>
-                        </summary>
-                        <div class="SelectMenu right-0">
-                            <div class="SelectMenu-modal">
-                                <div class="SelectMenu-list">
-                                    <button class="SelectMenu-item" role="menuitem" onclick="loadproj('new')"
-                                        id="sort-new">Newest</button>
-                                    <button class="SelectMenu-item disabled" role="menuitem" onclick="loadproj()"
-                                        id="sort-old">Oldest</button>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
+            <div class="col-xs-3 border">
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
                 </div>
             </div>
         </div>
-        <div class="d-flex flex-column" id="projects">
+        <div class="row h-half">
+            <div class="col-xs-3 border">
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+            </div>
+            <div class="col-xs-3 border">
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+            </div>
+            <div class="col-xs-3 border">
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+            </div>
+            <div class="col-xs-3 border">
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+                <div class="row h-half">
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+            </div>
         </div>
     </div>
-    <nav aria-label="Breadcrumb" class="ml-6 pl-3 mb-6">
-        <ol>
-            <li class="breadcrumb-item">Home</li>
-        </ol>
-    </nav>
-    <div>
+    <div id="cards" class="other__projects">
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="/js/ztext.js"></script>
-    <script src="/js/loader.js"></script>
-    <script src="/js/index.js"></script>
+    <div class="other__popup hidden" id="popup">
+        <div>
+            <h1 class="text-2xl font-concert other__glassmorphism"><span id="popup__title">Popup Title</span><span
+                    class="right pointer" onclick="closePopup()">X</span></h1>
+        </div>
+        <div class="other__glassmorphism">
+            <p class="font-concert m-12 text-justify" id="popup__body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Orci nulla
+                pellentesque dignissim enim sit amet venenatis. Etiam tempor orci eu lobortis elementum nibh tellus
+                molestie nunc. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Eleifend quam
+                adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Accumsan tortor posuere ac ut consequat
+                semper viverra. Bibendum neque egestas congue quisque egestas diam in arcu cursus. Quisque sagittis
+                purus sit amet volutpat consequat mauris nunc. Venenatis cras sed felis eget. Sit amet commodo nulla
+                facilisi nullam. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus.
+                <br><br>
+                Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Id eu nisl nunc mi ipsum faucibus.
+                Ullamcorper a lacus vestibulum sed arcu non odio. Egestas maecenas pharetra convallis posuere morbi leo.
+                Aliquam ultrices sagittis orci a scelerisque purus semper. Varius sit amet mattis vulputate enim nulla
+                aliquet. Ultrices neque ornare aenean euismod. Nibh tellus molestie nunc non. Fermentum dui faucibus in
+                ornare quam viverra orci sagittis. Ante metus dictum at tempor. Purus in massa tempor nec. Volutpat ac
+                tincidunt vitae semper. Faucibus vitae aliquet nec ullamcorper sit amet risus. Augue neque gravida in
+                fermentum. Nisl condimentum id venenatis a condimentum. Vitae sapien pellentesque habitant morbi. Vel
+                turpis nunc eget lorem dolor sed viverra ipsum nunc. Eget gravida cum sociis natoque. Laoreet sit amet
+                cursus sit amet.
+            </p>
+        </div>
+    </div>
+    <div class="other__right-bar--marquee-right">
+        <div class="other__right-bar--marquee">
+            <div class="other__marquee-text">Design today, relax
+                tomorrow.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="other__marquee-text">Design today, relax
+                tomorrow.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="other__marquee-text">Design today, relax
+                tomorrow.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="other__marquee-text">Design today, relax
+                tomorrow.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="other__marquee-text">Design today, relax
+                tomorrow.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="other__marquee-text">Design today, relax
+                tomorrow.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </div>
+    </div>
+    <div class="other__left-bar--marquee-left">
+        <div class="other__left-bar--marquee">
+            <div class="other__marquee-text">Hooked on design, by
+                design.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="other__marquee-text">Hooked on design, by
+                design.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="other__marquee-text">Hooked on design, by
+                design.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="other__marquee-text">Hooked on design, by
+                design.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="other__marquee-text">Hooked on design, by
+                design.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="other__marquee-text">Hooked on design, by
+                design.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </div>
+    </div>
+    <script>
+        const projects = [{
+            "title": "Search Engine",
+            "url": "https://github.com/mr-winson/search-engine",
+            "urlname": "GitHub",
+            "image": "search-engine.png",
+            "about": "This GitHub project is a fully functional web search engine and web crawler. It is fully open-source.",
+            "class": "search_engine"
+        }, {
+            "title": "Siddes",
+            "url": "https://siddes.com",
+            "urlname": "View",
+            "url2": "http://siddes53vvrnwjjnfy34vvlfxivehycwkshol5fqdk7bekr5fpq5r7ad.onion",
+            "url2name": "Onion URL (down)",
+            "image": "Siddes.png",
+            "about": "Siddes is a privacy first social media. As a solid supporter of the EFF, me and my brother have developed this for the last couple months and are excited to release it on January 1st, 2020!",
+            "class": "siddes"
+        }, {
+            "title": "Archivial",
+            "url": "https://archivial.alecw.net",
+            "urlname": "View",
+            "image": "Archivial.png",
+            "about": "A simple implementation of an internet archive hosted as a sub on my root domain. Check it out and link some archives. No account needed. Expect a cold start from my hoster.",
+            "class": "archivial"
+        }, {
+            "title": "Army Engine",
+            "url": "https://github.com/mr-winson/army-engine",
+            "urlname": "GitHub (private for now)",
+            "image": "Army-Engine.png",
+            "about": "Army Engine will be a search engine for military documents from around the world",
+            "class": "army-engine"
+        }, {
+            "title": "Branches",
+            "url": "https://br.alecw.net/",
+            "urlname": "Visit (Work in Progress)",
+            "url2": "https://br.alecw.net/mr-winson/army-engine",
+            "url2name": "GitHub Repo",
+            "image": "Branches.png",
+            "about": "Branches is a small and developer-only social media where you can post and share code snippets.",
+            "class": "branches"
+        }]
+
+        var i = 0
+
+        loadProjects()
+
+        function loadProjects() {
+            var stackOfCards = ''
+
+            i = 0
+
+            for (i = 0; i < projects.length; i++) {
+                var card
+                if (!projects[i].url2) {
+                    card = `<card id="card_${i}" class="card">
+                    <h1>${projects[i].title}</h1>
+                    <a href="${projects[i].url}" target="_blank">${projects[i].urlname}</a>
+                    <button onclick="flipCard('card_${i}')" class="right" target="_blank">Next Card</button>
+                    <p>${projects[i].about}</p>
+                    <img class="card__image" src="/assets/img/projects/${projects[i].image}">
+                </card>`
+                } else {
+                    card = `<card id="card_${i}" class="card">
+                    <h1>${projects[i].title}</h1>
+                    <a href="${projects[i].url}" target="_blank">${projects[i].urlname}</a>
+                    <a href="${projects[i].url2}" target="_blank">${projects[i].url2name}</a>
+                    <button onclick="flipCard('card_${i}')" class="right" target="_blank">Next Card</button>
+                    <p>${projects[i].about}</p>
+                    <img class="card__image" src="/assets/img/projects/${projects[i].image}">
+                </card>`
+                }
+
+                stackOfCards = stackOfCards + card
+            }
+
+            document.getElementById('cards').innerHTML = stackOfCards
+
+            for (i = 0; i < projects.length; i++) {
+                const card = document.getElementById(`card_${i}`)
+                card.style.transform = `rotate(${Math.floor(Math.random() * (20 - -20)) + -20}deg)`
+                card.style.position = `fixed`
+            }
+        }
+
+        function flipCard(id) {
+            const card = document.getElementById(id)
+            card.style.transition = '1s'
+            card.style.minWidth = card.style.width
+            card.style.minHeight = card.style.height
+            if (randomNumber(0, 4) == 1) {
+                card.style.right = '990vh'
+                card.style.left = 'inherit'
+            } else if (randomNumber(0, 4) == 2) {
+                card.style.left = '990vh'
+                card.style.right = 'inherit'
+            } else if (randomNumber(0, 4) == 3) {
+                card.style.top = '990vh'
+                card.style.bottom = 'inherit'
+            } else {
+                card.style.bottom = '990vh'
+                card.style.top = 'inherit'
+            }
+            card.style.transform = `rotate(${Math.floor(Math.random() * (90 - -90)) + -90}deg)`
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.add('hidden')
+        }
+
+        function popup(title, body) {
+            document.getElementById('popup__title').innerText = title
+            document.getElementById('popup__body').innerHTML = body
+            document.getElementById('popup').classList.remove('hidden')
+        }
+
+        function randomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min
+        }
+
+
+        function contactPopup() {
+            popup('Contact Me', `
+        Email: <a href="mailto:jude@alecw.net" class="link">jude@alecw.net</a><br><br>
+        Message me:
+        <form action="https://send.pageclip.co/xK2VkMpGVwU4ym7pP7EeAXbnjgCIMlps/contact" class="pageclip-form"
+            method="post">
+            <input type="email" name="email" placeholder="Email" class="input" required /><br>
+            <input type="name" name="name" placeholder="Your name" class="input" /><br>
+            <textarea type="text" name="subject" value="Subject" class="input textarea" rows='4' required placeholder="Message"></textarea><br>
+
+            <button type="submit" class="button pageclip-form__submit">
+                <span>Send</span>
+            </button>
+        </form><br>
+        My mailing list:
+        <div id="mc_embed_signup">
+            <form
+                action="https://alecw.us7.list-manage.com/subscribe/post?u=90a98fc71fb460cf3977cddfa&amp;id=6eb40130f5"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <div class="mc-field-group">
+                        <input type="email" value="" name="EMAIL" class="required email input" placeholder="Email" id="mce-EMAIL">
+                    </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            name="b_90a98fc71fb460cf3977cddfa_6eb40130f5" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
+                            id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+        </div>
+        `)
+        }
+
+
+        function socialsPopup() {
+            popup('Follow Me and Stuff', `
+        <p>Socials:</p>
+        <a href="https://github.com/mr-winson/" class="link" target="_blank">GitHub</a><br>
+        <a href="https://mrmemr.medium.com/" class="link" target="_blank">Medium</a><br>
+        <a href="https://blog.alecw.net/" class="link" target="_blank">Blog</a><br>
+        <a href="https://siddes.com/404/" class="link" target="_blank">Siddes</a><br>
+        <p>I Support:</p>
+        <a href="https://eff.org/" class="link" target="_blank">EFF</a><br>
+        <a href="https://saveonlinefreespeech.org/" class="link" target="_blank">Save Online Free Speech</a><br>
+        <a>Web Anarchy</a>
+        `)
+        }
+
+
+        function menuPopup() {
+            popup('Menu', `
+            <a class="pointer link" onclick="pgpPopup()">PGP Key</a><br>
+            <a class="pointer link" onclick="contactPopup()">Contact</a><br>
+            <a class="pointer link" onclick="socialsPopup()">Socials and Stuff</a>
+        `)
+        }
+
+        function pgpPopup() {
+            popup('Public PGP Key',
+
+                `<pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+=YBsL
+-----END PGP PUBLIC KEY BLOCK-----
+            </pre>`)
+        }
+    </script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script type='text/javascript'>
+        (function ($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL';
+            ftypes[0] = 'email';
+            fnames[1] = 'FNAME';
+            ftypes[1] = 'text';
+            fnames[2] = 'LNAME';
+            ftypes[2] = 'text';
+            fnames[3] = 'ADDRESS';
+            ftypes[3] = 'address';
+            fnames[4] = 'PHONE';
+            ftypes[4] = 'phone';
+            fnames[5] = 'BIRTHDAY';
+            ftypes[5] = 'birthday';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+    </script>
+    <!--End mc_embed_signup-->
 </body>
 
 </html>

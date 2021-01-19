@@ -1,0 +1,221 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+/* other css */
+@import url("imports/helpers.css");
+@import url("imports/marquee.css");
+
+body {
+    margin: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+#main {
+    max-width: 100% !important;
+    margin: 0;
+    background: linear-gradient(90deg, rgba(194, 58, 118, 1) 13%, rgba(255, 0, 0, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    height: 100%;
+}
+
+#content {
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#main__navbar {
+    padding: 25px;
+    z-index: 1;
+    margin-right: 0px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: row;
+    border: 2px black solid;
+    max-height: 70px;
+}
+
+#main__navbar a {
+    margin: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Concert One',
+        cursive;
+    z-index: 2;
+}
+
+.other__popup {
+    position: fixed;
+    top: 15vh;
+    right: 20vw;
+    left: 20vw;
+    bottom: 15vh;
+    max-height: 70vh;
+    overflow: scroll;
+}
+
+.other__glassmorphism {
+    padding: 15px;
+    border-radius: 25px;
+    border: 2px black solid;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-height: 40vh;
+    overflow: scroll;
+}
+
+.font-concert {
+    font-family: 'Concert One', cursive;
+}
+
+.font-catamaran {
+    font-family: 'Catamaran',
+        sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.pointer {
+    cursor: pointer
+}
+
+.border {
+    border: 2px black solid;
+    border-left: 0px black solid;
+    border-top: 0px black solid;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAL0lEQVQImWOwe32sl4GBgaGh2VWPgYGBgcFNceF/BnTwxCP9dtHOlNsYEgwMDAwA01kK0lYR7R8AAAAASUVORK5CYII=);
+}
+
+#main>div>div>div>div:hover {
+    border: 2px black solid;
+    border-left: 0px black solid;
+    border-top: 0px black solid;
+    -webkit-filter: blur(40px);
+    -webkit-filter: contrast(1000%);
+    -webkit-filter: brightness(1000%);
+    filter: blur(40px);
+    filter: contrast(1000%);
+    filter: brightness(1000%);
+    transform: scale(1);
+}
+
+.card {
+    position: fixed;
+    top: 20vh;
+    left: 30vh;
+    right: 30vh;
+    bottom: 10vh;
+    border-radius: 25px;
+    max-height: 70vh;
+    overflow: scroll;
+    background-color: rgb(18, 0, 64);
+    box-shadow: 10px 10px 89px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 89px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 89px 0px rgba(0, 0, 0, 0.75);
+    max-width: 60vh;
+    max-width: 60vw;
+    overflow: hidden;
+    color: rgb(205, 205, 205);
+    padding-top: 0;
+    font-family: 'Concert One',
+        cursive;
+    border: 20px rgb(18, 0, 64) solid;
+    border-bottom: 40px rgb(18, 0, 64) solid;
+}
+
+@media (max-width: 800px) {
+    .card {
+        left: 15%;
+        right: 5%;
+        width: 90%;
+    }
+}
+
+.card a {
+    color: rgb(79, 254, 205);
+}
+
+.card a:visited {
+    color: rgb(255, 49, 49);
+}
+
+.link {
+    color: rgb(79, 254, 205);
+}
+
+.link:visited {
+    color: rgb(0, 0, 0);
+}
+
+.card button {
+    color: black;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    background-color: rgb(79, 254, 205);
+}
+
+.button {
+    color: black;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    background-color: rgb(79, 254, 205);
+}
+
+.card * {}
+
+.card__image {
+    max-height: 70%;
+    max-width: 70%;
+    display: block;
+    margin: auto;
+    border-radius: 25px !important;
+}
+
+.textarea {
+    resize: none;
+    width: 50%;
+}
+
+.input {
+    width: 50%;
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.xs\:visible {
+    display: block;
+}
+
+@media (max-width: 765px) {
+    .xs\:hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 765px) {
+    .xs\:visible {
+        display: none;
+    }
+}

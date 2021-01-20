@@ -38,8 +38,22 @@
                 <div class="row h-half">
                     <div class="col-xs-3 border"></div>
                     <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"><span>P</span></div>
+                    <div class="col-xs-3 border"><span>I</span></div>
+                </div>
+                <div class="row h-half">
                     <div class="col-xs-3 border"></div>
                     <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"></div>
+                </div>
+            </div>
+            <div class="col-xs-3 border">
+                <div class="row h-half">
+                    <div class="col-xs-3 border"><span>C</span></div>
+                    <div class="col-xs-3 border"><span>K</span></div>
+                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"><span>A</span></div>
                 </div>
                 <div class="row h-half">
                     <div class="col-xs-3 border"></div>
@@ -51,9 +65,9 @@
             <div class="col-xs-3 border">
                 <div class="row h-half">
                     <div class="col-xs-3 border"></div>
-                    <div class="col-xs-3 border"></div>
-                    <div class="col-xs-3 border"></div>
-                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"><span>P</span></div>
+                    <div class="col-xs-3 border"><span>A</span></div>
+                    <div class="col-xs-3 border"><span>C</span></div>
                 </div>
                 <div class="row h-half">
                     <div class="col-xs-3 border"></div>
@@ -64,21 +78,7 @@
             </div>
             <div class="col-xs-3 border">
                 <div class="row h-half">
-                    <div class="col-xs-3 border"></div>
-                    <div class="col-xs-3 border"></div>
-                    <div class="col-xs-3 border"></div>
-                    <div class="col-xs-3 border"></div>
-                </div>
-                <div class="row h-half">
-                    <div class="col-xs-3 border"></div>
-                    <div class="col-xs-3 border"></div>
-                    <div class="col-xs-3 border"></div>
-                    <div class="col-xs-3 border"></div>
-                </div>
-            </div>
-            <div class="col-xs-3 border">
-                <div class="row h-half">
-                    <div class="col-xs-3 border"></div>
+                    <div class="col-xs-3 border"><span>K</span></div>
                     <div class="col-xs-3 border"></div>
                     <div class="col-xs-3 border"></div>
                     <div class="col-xs-3 border"></div>
@@ -149,6 +149,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div id="cards2" class="other__projects">
     </div>
     <div id="cards" class="other__projects">
     </div>
@@ -254,43 +256,99 @@
             "class": "branches"
         }]
 
+        var cardCount = 24
+
         var i = 0
 
         loadProjects()
+        loadProjects2()
 
         function loadProjects() {
             var stackOfCards = ''
 
             i = 0
+            var card = ''
 
             for (i = 0; i < projects.length; i++) {
-                var card
                 if (!projects[i].url2) {
-                    card = `<card id="card_${i}" class="card">
-                    <h1>${projects[i].title}</h1>
-                    <a href="${projects[i].url}" target="_blank">${projects[i].urlname}</a>
-                    <button onclick="flipCard('card_${i}')" class="right" target="_blank">Next Card</button>
-                    <p>${projects[i].about}</p>
-                    <img class="card__image" src="/assets/img/projects/${projects[i].image}">
-                </card>`
+                    card = `<card id="card_${i}"
+            class="card">
+            <h1>${projects[i].title}</h1>
+            <a href="${projects[i].url}" target="_blank">${projects[i].urlname}</a>
+            <button onclick="flipCard('card_${i}')" class="right" target="_blank">Next Card</button>
+            <p>${projects[i].about}</p>
+            <img class="card__image" src="/assets/img/projects/${projects[i].image}">
+            </card>`
                 } else {
                     card = `<card id="card_${i}" class="card">
-                    <h1>${projects[i].title}</h1>
-                    <a href="${projects[i].url}" target="_blank">${projects[i].urlname}</a>
-                    <a href="${projects[i].url2}" target="_blank">${projects[i].url2name}</a>
-                    <button onclick="flipCard('card_${i}')" class="right" target="_blank">Next Card</button>
-                    <p>${projects[i].about}</p>
-                    <img class="card__image" src="/assets/img/projects/${projects[i].image}">
-                </card>`
+                <h1>${projects[i].title}</h1>
+                <a href="${projects[i].url}" target="_blank">${projects[i].urlname}</a>
+                <a href="${projects[i].url2}" target="_blank">${projects[i].url2name}</a>
+                <button onclick="flipCard('card_${i}')" class="right" target="_blank">Next Card</button>
+                <p>${projects[i].about}</p>
+                <img class="card__image" src="/assets/img/projects/${projects[i].image}">
+            </card>`
                 }
 
                 stackOfCards = stackOfCards + card
             }
 
-            document.getElementById('cards').innerHTML = stackOfCards
+            card = `<card id="card_pack" class="card-full card" onclick="openCards()">
+                <img class="card__image-full" src="/assets/img/projects/Projects-cover.png">
+            </card>`
 
+            stackOfCards = stackOfCards + card
+
+            document.getElementById('cards').innerHTML = stackOfCards
+        }
+
+        function openCards() {
+            const pack = document.getElementById(`card_pack`)
+            pack.style.transition = '2s'
+            pack.style.top = '990vh'
+            pack.style.bottom = 'inherit'
             for (i = 0; i < projects.length; i++) {
                 const card = document.getElementById(`card_${i}`)
+                card.style.transition = '1s'
+                card.classList.add('card-boxshadow')
+                card.style.transform = `rotate(${Math.floor(Math.random() * (20 - -20)) + -20}deg)`
+                card.style.position = `fixed`
+            }
+        }
+
+        function loadProjects2() {
+            var stackOfCards = ''
+
+            i = 0
+
+            var card = ''
+
+            for (i = 0; i < cardCount; i++) {
+                card = `<card id="base_${i}" class="card-full card2" onclick="flipCard('base_${i}')">
+                    <img class="card__image-full" src="/assets/img/baseballCards/card_${i + 1}.jpeg">
+                </card>`
+
+                stackOfCards = stackOfCards + card
+            }
+
+            card = `<card id="2_card_pack" class="card-full card2" onclick="openCards2()">
+                <img class="card__image-full" src="/assets/img/projects/iu.jpg">
+            </card>`
+
+            stackOfCards = stackOfCards + card
+
+            document.getElementById('cards2').innerHTML = stackOfCards
+        }
+
+        function openCards2() {
+            const pack = document.getElementById(`2_card_pack`)
+            pack.style.transition = '2s'
+            pack.style.top = '990vh'
+            pack.style.bottom = 'inherit'
+            for (i = 0; i < projects.length; i++) {
+                const card = document.getElementById(`base_${i}`)
+                card.style.transition = '1s'
+                card.classList.add('card-boxshadow')
                 card.style.transform = `rotate(${Math.floor(Math.random() * (20 - -20)) + -20}deg)`
                 card.style.position = `fixed`
             }

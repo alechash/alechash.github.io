@@ -113,18 +113,14 @@ body {
 .card {
     position: fixed;
     top: 20vh;
-    left: 30vh;
-    right: 30vh;
+    right: 10vh;
     bottom: 10vh;
     border-radius: 25px;
     max-height: 70vh;
     overflow: scroll;
     background-color: rgb(18, 0, 64);
-    box-shadow: 10px 10px 89px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 89px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 89px 0px rgba(0, 0, 0, 0.75);
-    max-width: 60vh;
-    max-width: 60vw;
+    max-width: 280px;
+    max-width: 280px;
     overflow: hidden;
     color: rgb(205, 205, 205);
     padding-top: 0;
@@ -132,6 +128,62 @@ body {
         cursive;
     border: 20px rgb(18, 0, 64) solid;
     border-bottom: 40px rgb(18, 0, 64) solid;
+}
+
+.card2 {
+    position: fixed;
+    top: 20vh;
+    left: 10vh;
+    bottom: 10vh;
+    border-radius: 25px;
+    max-height: 70vh;
+    overflow: scroll;
+    background-color: rgb(18, 0, 64);
+    max-width: 280px;
+    max-width: 280px;
+    overflow: hidden;
+    color: rgb(205, 205, 205);
+    padding-top: 0;
+    font-family: 'Concert One',
+        cursive;
+    border: 20px rgb(18, 0, 64) solid;
+    border-bottom: 40px rgb(18, 0, 64) solid;
+}
+
+.col-xs-3.border span {
+    text-align: center;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.col-xs-3.border {
+    font-size: 1.5em;
+}
+
+.col-xs-3.border {
+    text-align: center;
+}
+
+.card-full {
+    border-radius: 0;
+    max-height: 70vh;
+    overflow: scroll;
+    background-color: rgb(18, 0, 64);
+    max-width: 320px;
+    max-width: 320px;
+    overflow: hidden;
+    color: rgb(205, 205, 205);
+    padding-top: 0;
+    font-family: 'Concert One',
+        cursive;
+    border: none;
+    border-bottom: none;
+}
+
+.card-boxshadow {
+    box-shadow: 10px 10px 89px 0px rgba(0, 0, 0, 0.50);
+    -webkit-box-shadow: 10px 10px 89px 0px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 10px 10px 89px 0px rgba(0, 0, 0, 0.50);
 }
 
 @media (max-width: 800px) {
@@ -142,11 +194,13 @@ body {
     }
 }
 
-.card a {
+.card a,
+.card2 a {
     color: rgb(79, 254, 205);
 }
 
-.card a:visited {
+.card a:visited,
+.card2 a:visited {
     color: rgb(255, 49, 49);
 }
 
@@ -158,7 +212,8 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.card button {
+.card button,
+.card2 button {
     color: black;
     border-radius: 10px;
     border: none;
@@ -184,6 +239,13 @@ body {
     display: block;
     margin: auto;
     border-radius: 25px !important;
+}
+
+.card__image-full {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .textarea {

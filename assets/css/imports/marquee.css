@@ -9,7 +9,7 @@
     background: rgb(0, 0, 176);
     border-bottom: 3px black solid;
     padding: .41667vw 0 .48611vw;
-    position: absolute;
+    position: fixed;
     transform-origin: top left;
     width: 100vh;
     left: 100%;
@@ -47,7 +47,7 @@
     background: rgb(0, 0, 176);
     border-bottom: 3px black solid;
     padding: .41667vw 0 .48611vw;
-    position: absolute;
+    position: fixed;
     transform-origin: top right;
     width: 100vh;
     right: 100%;
@@ -104,4 +104,8 @@
     100% {
         transform: translateX(0)
     }
+}
+
+.zindex {
+    z-index: 50;
 }

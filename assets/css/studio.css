@@ -178,6 +178,7 @@ body {
         cursive;
     border: none;
     border-bottom: none;
+    width: 320px;
 }
 
 .card-boxshadow {
@@ -280,4 +281,22 @@ body {
     .xs\:visible {
         display: none;
     }
+}
+
+.message {
+    position: fixed;
+    right: 30vw;
+    left: 30vw;
+    top: 30vw;
+    text-align: center;
+    padding: 15px;
+    border-radius: 25px;
+    border: 2px black solid;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-height: 40vh;
+    overflow: scroll;
+    font-family: 'Concert One',
+        cursive;
 }

@@ -56,6 +56,11 @@ body {
 .header {
     font-family: odin;
     font-weight: bold italic;
+    text-align: left;
+}
+
+h1.header {
+    font-size: 50px;
 }
 
 .wide-text {
@@ -136,8 +141,11 @@ pre {
 
 .links {
     width: auto;
+    position: fixed;
+    right: 25px;
+    top: 0px;
     background-color: rgb(20, 20, 20);
-    padding: 5px;
+    padding: 8px;
     border-radius: 25px;
     font-size: 20px;
     font-family: odin;
@@ -177,4 +185,26 @@ pre {
 
 .txt-black {
     color: black;
+}
+
+.pod {
+    background-color: rgb(21, 21, 21);
+    padding: 8px 24px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.pod:hover {
+    background-color: rgb(255, 255, 255);
+    padding: 8px 24px;
+    color: black;
+    border-radius: 5px;
+}
+
+.pod-outer {
+    line-height: 50px;
+}
+
+.align-lefttt {
+    text-align: left;
 }

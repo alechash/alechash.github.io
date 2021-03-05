@@ -177,9 +177,9 @@ pre {
 }
 
 .bottom {
-    padding: 3000px 0px;
+    padding: 0px 0px;
     background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(8, 8, 8, 1) 0%, rgba(121, 9, 18, 1) 35%, rgba(0, 101, 255, 1) 100%);
+    background: linear-gradient(180deg, rgba(8, 8, 8, 1) 0%, rgba(0, 101, 255, 1) 100%);
 }
 
 .bottom-hi {
@@ -279,4 +279,9 @@ pre {
     transform-origin: 50% 0;
     -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
     animation: swinging 3.5s ease-in-out forwards infinite;
+}
+
+.bottom-img {
+    margin-bottom: -10px;
+    max-width: 80px;
 }

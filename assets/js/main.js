@@ -65,7 +65,9 @@ document.getElementById("pgp_button").addEventListener('click', function () {
     document.getElementById("pgp_button").style.display = "none"
 })
 
-document.getElementById('pageHeight').innerText = `this page is ${document.body.scrollHeight} pixels tall`
+setInterval(() => {
+    document.getElementById('pageHeight').innerText = `this page is ${document.body.scrollHeight} pixels tall`
+}, 1000);
 
 var pullChain = document.getElementById("pull-chain");
 var css = document.getElementById("css");

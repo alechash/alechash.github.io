@@ -26,13 +26,27 @@
         const redirect = query('redirect').toLowerCase()
 
         if (redirect == 'github') {
+            sendRedirctData('github')
             window.location = 'https://github.com/mr-winson'
         } else if (redirect == 'blog') {
+            sendRedirctData('blog')
             window.location = 'https://blog.alecw.net/'
         } else if (redirect == 'email') {
+            sendRedirctData('email')
             window.location = 'mailto:jude@alecw.net'
         } else if (redirect == 'text') {
+            sendRedirctData('text')
             window.location = 'sms:9376685138'
+        } else if (rdirect == 'slopes') {
+            sendRedirctData('slopes')
+            window.location = 'https://my.getslopes.com/app/addFriend/Oo3dnRdalr'
+        } else if (rdirect == 'resume') {
+            sendRedirctData('resume')
+            window.location = 'https://api.alecw.net/static/resume.pdf'
+        }
+
+        function sendRedirectData(redirect) {
+            fetch(`https://api.alecw.net/analytics/redirect?red=${redirect}`)
         }
     </script>
 </body>

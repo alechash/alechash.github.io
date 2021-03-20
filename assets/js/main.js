@@ -1,10 +1,10 @@
-GitHubCalendar(".calendar", "mr-winson", {
+GitHubCalendar(".calendar", "alechash", {
     responsive: true
 });
 
 const projects = [{
     "title": "Search Engine",
-    "url": "https://github.com/mr-winson/search-engine",
+    "url": "https://github.com/alechash/search-engine",
     "urlname": "GitHub",
     "image": "search-engine.png",
     "about": "This GitHub project is a fully functional web search engine and web crawler. It is fully open-source.",
@@ -29,7 +29,7 @@ const projects = [{
     "title": "Branches",
     "url": "https://br.alecw.net/",
     "urlname": "Visit (Work in Progress)",
-    "url2": "https://br.alecw.net/mr-winson/army-engine",
+    "url2": "https://br.alecw.net/alechash/branches",
     "url2name": "GitHub Repo",
     "image": "Branches.png",
     "about": "Branches is a small and developer-only social media where you can post and share code snippets.",

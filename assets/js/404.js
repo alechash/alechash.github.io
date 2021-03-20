@@ -1,4 +1,4 @@
-GitHubCalendar(".calendar", "mr-winson", {
+GitHubCalendar(".calendar", "alechash", {
     responsive: true
 });
 

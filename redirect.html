@@ -43,6 +43,15 @@
         } else if (redirect == 'resume') {
             sendRedirectData('resume')
             window.location = 'https://api.alecw.net/static/resume.pdf'
+        } else if (redirect == 'insta') {
+            sendRedirectData('insta')
+            window.location = 'http://instagram.com/alec-w-skiing'
+        } else if (redirect == 'unsplash') {
+            sendRedirectData('unsplash')
+            window.location = 'https://unsplash.com/@alechash'
+        } else if (redirect == 'gallery') {
+            sendRedirectData('gallery')
+            window.location = '/p/gallery/'
         }
 
         function sendRedirectData(redirect) {

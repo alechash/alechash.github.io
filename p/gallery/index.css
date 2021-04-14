@@ -34,11 +34,12 @@ nav div span:last-child {
 .row .img {
     width: 100%;
     overflow: hidden;
+    height: 50vw;
 }
 
 .row .img img {
-    min-height: 100%;
-    min-width: 100%;
+    min-height: calc(100vw/2);
+    min-width: 50vw;
 }
 
 .img.two {
@@ -78,10 +79,16 @@ main {
     color: white;
 }
 
+.img_meta h3:hover {
+    text-decoration: underline;
+}
+
 .img_meta h3,
-.img_meta span {
+.img_meta span,
+.img_meta a {
     color: transparent;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .img {

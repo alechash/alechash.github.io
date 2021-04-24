@@ -38,8 +38,14 @@ const projects = [{
     "title": "Better Mac Store",
     "url": "https://github.com/bruggg/bettermacstore",
     "image": "bms.svg",
-    "about": "Branches is a small and developer-only social media where you can post and share code snippets.",
-    "class": "branches"
+    "about": "The Better Mac Store is a better Mac App Store!",
+    "class": "bms"
+}, {
+    "title": "Tvose",
+    "url": "http://github.com/tvose/tvose",
+    "image": "tvose.png",
+    "about": "Tvose is a privacy first search engine with features of Google and a reward system like Brave. And, of course, the privacy of DuckDuckGo.",
+    "class": "tvose"
 }]
 
 projects.reverse()
@@ -48,9 +54,9 @@ var projectsHtml = ``
 
 for (i = 0; i < projects.length; i++) {
     projectsHtml = projectsHtml + `
-            <div class="col-sm-6 col-xs-12 card-outer">
-                <a href="${projects[i].url}" class="link" target="_blank">
-                    <div class="card">
+            <div class="col-sm-6 col-xs-12 mb-12 card-outer" title="${projects[i].about}">
+                <a href="${projects[i].url}" class="link no-decor" target="_blank">
+                    <div class="pod">
                         <div class="card-image"><img src="/assets/img/${projects[i].image}"></div>
                         <div class="card-title">${projects[i].title}</div>
                     </div>

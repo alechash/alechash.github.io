@@ -285,3 +285,11 @@ pre {
     margin-bottom: -10px;
     max-width: 80px;
 }
+
+.img {
+    max-width: 250px;
+}
+
+.mb-12 {
+    margin-bottom: 2rem;
+}

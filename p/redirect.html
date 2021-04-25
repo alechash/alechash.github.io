@@ -52,6 +52,12 @@
         } else if (redirect == 'gallery') {
             sendRedirectData('gallery')
             window.location = '/p/gallery/'
+        } else if (redirect == 'projects') {
+            sendRedirectData('projects')
+            window.location = '/projects.html'
+        } else if (redirect == 'home') {
+            sendRedirectData('home')
+            window.location = '/index.html'
         }
 
         function sendRedirectData(redirect) {

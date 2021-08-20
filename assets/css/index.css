@@ -1,160 +1,226 @@
 body {
-	max-width: 800px;
-	margin: auto;
-	padding: 0 15px;
-}
-
-.title_img {
-	width: 40px;
-}
-
-.title {
-	font-family: monospace;
-	font-weight: bolder;
-	text-decoration: none;
-	font-size: 40px;
-}
-
-.title a:hover {
-	color: blue
-}
-
-.title a {
-	text-decoration: none;
-	color: black;
-	margin-left: 15px;
-}
-
-.nav_link {
-	font-family: monospace;
-	font-weight: bolder;
-	text-decoration: none;
-	margin-right: 15px;
-	font-size: 20px;
-}
-
-.nav_link a:hover {
-	color: blue
-}
-
-.nav_link a {
-	text-decoration: none;
-	color: black;
-}
-
-.about {
-	font-family: 'Roboto Mono', monospace;
-}
-
-.pod {
-	padding: 8px 24px !important;
-	border-radius: 5px;
-	transition: 0.3s;
-	margin-left: 6px;
-	box-shadow: 0 2px 4px 0 rgb(250, 250, 250),
-		0 3px 10px 0 rgb(230, 230, 230);
-	word-break: keep-all;
-	line-break: break-all;
-}
-
-.pod a {
-	color: black;
-	font-family: 'Roboto Mono', monospace;
-	text-decoration: none
-}
-
-.pod:hover {
-	background-color: black;
-	padding: 8px 24px;
-	border-radius: 5px;
-}
-
-.pod:hover a {
+	margin: 0;
+	width: 100vw;
+	background: black;
 	color: white;
 }
 
-.pod-outer {
-	line-height: 50px;
+@font-face {
+    font-family: 'Stretch Pro';
+    src: url('/assets/StretchProRegular.woff2') format('woff2'),
+        url('/assets/StretchProRegular.woff') format('woff'),
+        url('/assets/StretchProRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-.pgp {
-	overflow: scroll;
-	padding: 15px;
-	background: rgb(245, 245, 245);
-	border-radius: 15px;
-	color: rgb(12, 12, 12);
-	height: 50px;
-	overflow-y: hidden;
-	overflow-x: hidden;
+.star{display: block; background-color: #fff; position: absolute; border-radius: 100%; animation-timing-function: linear;animation-iteration-count: infinite;}
+
+@keyframes move_right {
+   from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(8px) rotate(-360deg); }
 }
 
-.pgp_button {
-	background: rgb(230, 230, 230);
-	border: none;
-	padding: 5px 25px;
-	float: right;
-	border-radius: 10px;
-	color: black;
-	margin-bottom: 20px;
-	cursor: pointer;
-	box-shadow: 0 2px 4px 0 rgb(250, 250, 250),
-		0 3px 10px 0 rgb(230, 230, 230);
+@keyframes move_left {
+   from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+    to   { transform: rotate(-360deg) translateX(8px) rotate(360deg); }
 }
 
-.footer a {
-	color: inherit;
-	text-decoration: none;
-	display: block;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+@media only screen and (max-width: 800px) {
+	.grid-container {
+      display: grid;
+      grid-template-columns: auto;
+    }
+}
+
+.grid-item {
+	height: 100vh;
+}
+
+.card-inner {
+	position: relative;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+	background: transparent;
+	border: 3px white solid;
+	border-radius: 25px;
+	width: 70% !important;
+	max-width: calc(33.33vh * 0.7) !important;
+	max-width: calc(33.33vw * 0.7) !important;
+	min-width: 200px;
+	padding: 10px;
+}
+
+.card-inner-2 {
+	margin-top: 25%;
+}
+
+.card-inner-1 {
+	margin-top: 10.5%;
+}
+
+svg {
+    display: inline;
+    font: 10.5em 'Stretch Pro';
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+p {
+	font-family: 'Krona One', sans-serif;
 	font-size: small;
-	font-family: 'Roboto Mono', monospace;
+	text-align: left;
 }
 
-.footer_left {
-	max-width: 50%;
-	float: left;
+h1 {
+	font-family: 'Stretch Pro', sans-serif;
+	text-align: center;
 }
 
-.footer_right {
-	max-width: 50%;
-	float: right;
+.social-button-1 {
+	background: rgb(43, 53, 70);
+	display: block;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	font-family: 'Stretch Pro', sans-serif;
+	padding: 12px;
 }
 
-.footer_right span {
-	float: left;
+.social-button-2 {
+	background: rgb(227, 23, 127);
+	display: block;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	padding: 12px;
 }
 
-.footer {
-	margin-bottom: 25px;
+.social-button-3 {
+	background: rgb(70, 56, 232);
+	display: block;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	font-family: 'Stretch Pro', sans-serif;
+	padding: 12px;
 }
 
-.cards {
-	max-width: 400px;
-	width: 100%;
-	margin: auto
-}
-
-.card {
-	background: rgb(240, 240, 240);
-	padding: 15px;
-	border-radius: 15px;
-	margin: 20px 0;
-}
-
-.card_link {
-	text-decoration: none
-}
-
-.card h2 {
-	font-family: monospace;
-	margin-top: 5px;
-}
-
-.card p {
-	font-family: 'Roboto Mono', monospace;
+.social-button-4 {
+	background: rgb(255, 255, 255);
+	display: block;
+	text-align: center;
 	color: black;
+	text-decoration: none;
+	padding: 12px;
 }
 
-.card img {
-	width: 100%;
-	margin: auto;
-	display: inline block
+.social-button-5 {
+	background: rgb(0, 255, 186);
+	display: block;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+	padding: 12px;
+}
+
+.social-button-6 {
+	background: #ff0000;
+	display: block;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	font-family: 'Stretch Pro', sans-serif;
+	padding: 12px;
+}
+
+.social-button-7 {
+	background: #e3ff00;
+	display: block;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+	padding: 12px;
+}
+
+.social-button-8 {
+	background: #0003ff;
+	display: block;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	font-family: 'Stretch Pro', sans-serif;
+	padding: 12px;
+}
+
+.work-card {
+	text-align: left;
+	text-decoration: none;
+	font-family: 'Stretch Pro', sans-serif;
+}
+
+.work-card div {
+	margin-top: 6px;
+	background: white;
+	color: black;
+	transition: 0.3s;
+	padding: 3px 6px;
+}
+
+.work-card div h2 {
+	margin: 0;
+	padding: 0
+}
+
+.work-card div p {
+	text-align: left;
+	font-family: 'Stretch Pro', sans-serif;
+}
+
+.work-card div:hover {
+	background: black;
+	color: white
+}

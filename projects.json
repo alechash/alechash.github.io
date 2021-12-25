@@ -1,27 +1,31 @@
 [{
-        "title": "Search Engine",
-        "url": "https://github.com/mr-winson/search-engine",
-        "urlname": "GitHub",
-        "image": "search-engine.png",
-        "about": "This GitHub project is a fully functional web search engine and web crawler. It is fully open-source.",
-        "class": "search_engine"
-    },
-    {
-        "title": "Siddes",
-        "url": "https://siddes.com",
-        "urlname": "View",
-        "url2": "http://siddes53vvrnwjjnfy34vvlfxivehycwkshol5fqdk7bekr5fpq5r7ad.onion",
-        "url2name": "Onion URL (down)",
-        "image": "Siddes.png",
-        "about": "Siddes is a privacy first social media. As a solid supporter of the EFF, me and my brother have developed this for the last couple months and are excited to release it on January 1st, 2020!",
-        "class": "siddes"
-    },
-    {
-        "title": "Archivial",
-        "url": "https://archivial.alecw.net",
-        "urlname": "View",
-        "image": "Archivial.png",
-        "about": "A simple implementation of an internet archive hosted as a sub on my root domain. Check it out and link some archives. No account needed. Expect a cold start from my hoster.",
-        "class": "archivial"
-    }
-]
+    "title": "Search Engine",
+    "url": "https://github.com/mr-winson/search-engine",
+    "urlname": "GitHub",
+    "image": "search-engine.png",
+    "about": "This GitHub project is a fully functional web search engine and web crawler. It is fully open-source.",
+    "class": "search_engine"
+}, {
+    "title": "Siddes",
+    "url": "https://siddes.com",
+    "urlname": "View",
+    "url2": "http://siddes53vvrnwjjnfy34vvlfxivehycwkshol5fqdk7bekr5fpq5r7ad.onion",
+    "url2name": "Onion URL (down)",
+    "image": "Siddes.png",
+    "about": "Siddes is a privacy first social media. As a solid supporter of the EFF, me and my brother have developed this for the last couple months and are excited to release it on January 1st, 2020!",
+    "class": "siddes"
+}, {
+    "title": "Archivial",
+    "url": "https://archivial.alecw.net",
+    "urlname": "View",
+    "image": "Archivial.png",
+    "about": "A simple implementation of an internet archive hosted as a sub on my root domain. Check it out and link some archives. No account needed. Expect a cold start from my hoster.",
+    "class": "archivial"
+}, {
+    "title": "Army Engine",
+    "url": "https://github.com/mr-winson/army-engine",
+    "urlname": "GitHub (private for now)",
+    "image": "Army-Engine.png",
+    "about": "Army Engine will be a search engine for military documents from around the world",
+    "class": "army-engine"
+}]

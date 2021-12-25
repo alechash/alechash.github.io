@@ -31,3 +31,12 @@ function includeHTML() {
         }
     }
 }
+
+var ztxt = new Ztextify("#name", {
+    depth: "10px",
+    layers: 80,
+    fade: false,
+    direction: "forwards",
+    event: "pointer",
+    eventRotation: "35deg"
+});
